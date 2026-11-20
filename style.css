@@ -1,6 +1,4 @@
-/* Core CSS Customizations */
-
-/* Ambulance Driving Animation */
+/* Custom Animations */
 @keyframes drive {
     0% { transform: translateX(-100vw); }
     100% { transform: translateX(100vw); }
@@ -10,15 +8,27 @@
     animation: drive 6s linear infinite;
 }
 
-/* Sound Wave Pulse */
-.pulse-wave {
-    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-/* Text Gradient Utilities */
+/* Gradient Text Utilities */
 .text-gradient {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+    background-image: linear-gradient(to right, #3b82f6, #a855f7);
+}
+
+/* Custom Slider Styling */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    transition: transform 0.1s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
 }
